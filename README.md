@@ -13,10 +13,14 @@ Install Google repo
     export PATH=${PATH}:~/bin
     
 ### build
-```
 pi4:
+```
+    chmod +x raspberryPi4-64-flutter-setup-build.sh
     ./raspberryPi4-64-flutter-setup-build.sh 
+```
 pi3:
+```
+    chmod +x raspberryPi3-64-flutter-setup-build.sh
     ./raspberryPi3-64-flutter-setup-build.sh
 ```
 
