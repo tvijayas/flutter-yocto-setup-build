@@ -39,7 +39,8 @@ if [ ! -d "raspberrypi3-64" ]; then
    echo -e 'CORE_IMAGE_EXTRA_INSTALL:append = " ivi-homescreen-release"' >> ./conf/local.conf
    echo -e 'IMAGE_FSTYPES = "tar.xz ext3 rpi-sdimg"' >> ./conf/local.conf
 else
-   cd raspberrypi3-64
+   cd $DIR
+   . ./sources/poky/oe-init-build-env raspberrypi3-64
 fi
 
 bitbake core-image-minimal
