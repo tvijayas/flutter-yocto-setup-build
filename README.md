@@ -12,7 +12,15 @@ Install Google repo
     chmod a+rx ~/.bin/repo
     export PATH=${PATH}:~/bin
     
-### references
+### build
+```
+pi4:
+    ./raspberryPi4-64-flutter-setup-build.sh 
+pi3:
+    ./raspberryPi3-64-flutter-setup-build.sh
+```
+
+### References
 
      https://github.com/meta-flutter/meta-flutter/tree/honister
      https://github.com/jwinarske/manifests
