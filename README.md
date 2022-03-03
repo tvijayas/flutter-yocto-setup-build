@@ -11,4 +11,9 @@ Install Google repo
     curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
     chmod a+rx ~/.bin/repo
     export PATH=${PATH}:~/bin
+    
+### references
+
+     https://github.com/meta-flutter/meta-flutter/tree/honister
+     https://github.com/jwinarske/manifests
 
