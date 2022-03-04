@@ -6,15 +6,6 @@ name: Manual workflow
 # or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
-    inputs:
-      name:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
-        # Default value if no value is explicitly provided
-        default: 'World'
-        # Input has to be provided for the workflow to run
-        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,4 +27,13 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Build
-      run: ./raspberryPi4-64-flutter-setup-build.sh
+      run: |
+        [ -d ../rpi4-drm-honister-latest ] || mkdir -p ../rpi4-drm-honister-latest
+        cd ../rpi4-drm-honister-latest
+        git config --list
+        git config --global user.email tvsarathy@gmail.com
+        git config --global user.name "Vijayasarathy
+        git config --list
+        git clone https://github.com/tvijayas/flutter-yocto-setup-build.git
+        cd flutter-yocto-setup-build
+        ./raspberryPi4-64-flutter-setup-build.sh
